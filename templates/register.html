@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
+<p>Register Account</p>
+
+<div class="login-block">
+<form method="POST">
+  <p>Email</p>
+  <input type="text" name="email"/>
+  <p>Username</p>
+  <input type="text" name="username" />
+  <p>Password</p>
+    <input type="password" name="password"/>
+    <br />
+    <button class="register-account">Register</button>
+  </form>
+  <button onclick="location.href='/'">Back</button>
+</div>
+
+{% endblock %}
