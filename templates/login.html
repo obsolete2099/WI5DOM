@@ -1,12 +1,18 @@
 {% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
-<p>Login</p>
-<div class="login-block">
-    <p>Email</p>
-  <input />
-  <p>Password</p>
-  <input />
+
+<link href="loginStyles.css" rel="stylesheet" type="text/css">
+<h2>Login Form</h2>
+  <div class="imgcontainer">
+    <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+    <p><b>Username</b></p>
+  <input type="text" placeholder="Enter Username" name="uname" required>
+  <p><b>Password</b></p>
+  <input type="password" placeholder="Enter Password" name="psw" required>
   <br>
   <button>Login</button>
   <button onclick="location.href='/'">Back</button>
 </div>
+
 {% endblock %}
