@@ -1,0 +1,45 @@
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 500px;
+}
+form {border: 3px solid #f1f1f1;}
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px 500px;
+}
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+  margin:  40px 540px;
+}
+input{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 10px 500px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button{
+  
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 20px 875px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
