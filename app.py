@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, request, redirect, url_for
+from flask import Flask, render_template, session, request, redirect, url_for, jsonify
 from flask_sqlalchemy import SQLAlchemy as _BaseSQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -113,12 +113,11 @@ def register_route():
 
 @app.route("/logout", methods=["POST"])
 def logout_account():
-    print("Logout")
     session.pop("logged-in")
     session.pop("id")
     session.pop("username")
     session.pop("email")
-    return ""
+    return jsonify({'success': True})
 
 
 if __name__ == "__main__":

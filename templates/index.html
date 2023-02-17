@@ -18,10 +18,15 @@
       fetch("/logout", {
         method: "POST",
         cache: "no-cache",
-      }).then((response) => {
-        console.log(response);
-        location.reload();
-      });
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            location.reload();
+          } else {
+            console.log("Logout failed");
+          }
+        });
     });
     document.body.appendChild(logout_button);
   }
