@@ -56,7 +56,8 @@ def register_route():
         email = request.form["email"]
         username = request.form["username"]
         password = request.form["password"]
-        salted_password = "foo"
+        salted_password = generate_password_hash(password)
+        
         print(f"Attempting to register account: {username}")
         # Check if username in use
         sql_query = db.session.execute(
