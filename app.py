@@ -69,7 +69,7 @@ def login_route():
                 return redirect(url_for("index_route"))
 
         # Render template after login post, we default to error message
-        return render_template("login.html", login_error_message="Error: Invalid username or password.")
+        return render_template("login.html", login_error_message="Error: Invalid username or password.", email=email)
 
     # Render template when we load the page the 1st time
     return render_template("login.html")
