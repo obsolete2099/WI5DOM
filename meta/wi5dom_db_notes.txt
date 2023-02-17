@@ -1,0 +1,9 @@
+
+User table:
+CREATE TABLE users(
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    username TEXT NOT NULL,
+    email TEXT NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    games integer[]
+);
