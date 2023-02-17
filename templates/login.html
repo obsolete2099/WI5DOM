@@ -1,12 +1,15 @@
 {% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
 <p>Login</p>
 <div class="login-block">
+  <form method="POST">
     <p>Email</p>
-  <input />
-  <p>Password</p>
-  <input />
-  <br>
-  <button>Login</button>
+    <input type="text" name="email" class="email-field" />
+    <p>Password</p>
+    <input type="password" name="password" />
+    <br>
+    <button>Login</button>
+  </form>
   <button onclick="location.href='/'">Back</button>
+
 </div>
 {% endblock %}
