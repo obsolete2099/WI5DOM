@@ -1,24 +1,27 @@
 {% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
-<p>Register Account</p>
+<head>
+  <link rel="stylesheet" href="register.css">
+</head>
+<h3>Register Account</h3>
 <p class="register-error error-text">{{register_error_message}}</p>
 
 <div class="login-block">
   <form method="POST">
-    <p>Email</p>
-    <input type="text" name="email" class="email-field" />
-    <p>Username</p>
-    <input type="text" name="username" class="username-field" />
-    <p>Password</p>
-    <input type="password" name="password" />
+    <p><b>Email</b></p>
+    <input type="text" name="email" placeholder="Enter Email" class="email-field" />
+    <p><b>Username</b></p>
+    <input type="text" name="username" placeholder="Enter Username"  class="username-field" />
+    <p><b>Password</b></p>
+    <input type="password" placeholder="Enter Password" name="password" />
     <br />
-    <button class="register-account">Register</button>
   </form>
+  <button class="register-account">Register</button>
   <button onclick="location.href='/'">Back</button>
 </div>
 
 <script>
-  let username = "{{username}}";
-  let email = "{{email}}";
+ 
+ 
 
   if (username.length > 0) {
     document.querySelector(".username-field").setAttribute("value", username);
@@ -26,6 +29,9 @@
 
   if (email.length > 0) {
     document.querySelector(".email-field").setAttribute("value", email);
+    
   }
+   
+  
 </script>
 {% endblock %}
