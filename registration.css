@@ -1,0 +1,21 @@
+h3{
+  margin: 0px 750px;
+}
+
+form{
+  margin: 5px 750px;
+  
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 8px 10px;
+  margin: 15px 750px;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
