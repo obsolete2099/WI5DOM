@@ -1,27 +1,42 @@
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>WI5DOM Game Archive</title>
     <link rel="stylesheet" href="vgarchive.css">
-</head>
-
-<body>
-  <h1 style="font-family:verdana"> WI5DOM Video Game Archive</h1>
-  <table>
-    <TABLE BORDER=1>
-      <tbody id="tableBody">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="vgarchive.js"></script>
+  </head>
+  <body>
+     <button id="homeButton" onclick="window.location.href='home.html'">Home</button>
+    <h1>WI5DOM Game Archive</h1>
+    <form id="game-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+      <label for="genre">Genre:</label>
+      <input type="text" id="genre">
+      <label for="console">Console:</label>
+      <input type="text" id="console">
+      <label for="completed">Completed:</label>
+      <input type="checkbox" id="completed">
+      <label for="recommend">Recommend:</label>
+      <input type="checkbox" id="recommend">
+      <button type="submit">Add Game</button>
+    </form>
+    <table id="game-table">
+      <thead>
         <tr>
-            <th style="width:15%">Video Game Title</th>
-            <th style="width:10%">Console</th>
-            <th style="width:5%">Currently Own</th>
-            <th style="width:5%">Time Spent Playing</th>
-            <th style="width:5%">Recommend</th>
-            <th style="width:5%">Stopped Playing</th>
+          <th>Name</th>
+          <th>Genre</th>
+          <th>Console</th>
+          <th>Completed</th>
+          <th>Recommend</th>
+          <th>Actions</th>
         </tr>
-     </tbody>
+      </thead>
+      <tbody>
+      </tbody>
     </table>
-     <button onclick="manualUpdate()"  class="button updateButton">Manual Update</button> 
-	 <script src="vgarchive.js"></script> 
-
-</body>
+   
+  </body>
 </html>
